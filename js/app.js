@@ -5,7 +5,7 @@ function adicionar(){
     let produto = document.getElementById('produto').value;
     let nome = produto.split('-')[0];
     let valor = produto.split('R$')[1];
-    let quantidade = document.getElementById('quantidade').value;
+    let quantidade = parseInt(document.getElementById('quantidade').value);
     let somaValor = valor * quantidade;
 
     let carrinho = document.getElementById('lista-produtos');
