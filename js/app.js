@@ -8,6 +8,12 @@ function adicionar(){
     let quantidade = parseInt(document.getElementById('quantidade').value);
     let somaValor = valor * quantidade;
 
+    if (isNaN(quantidade) || quantidade <= 0) {
+        alert("Insira uma quantidade válida.");
+        return;
+    }
+
+    
     let carrinho = document.getElementById('lista-produtos');
         carrinho.innerHTML = carrinho.innerHTML + `<section class="carrinho__produtos__produto">
         <span class="texto-azul">${quantidade}x</span> ${nome} <span class="texto-azul">R$${somaValor}</span>
